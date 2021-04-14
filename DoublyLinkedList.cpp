@@ -38,7 +38,18 @@ class DoublyLinkedList {
 
 		Node* nodeExists(int k)
 		{
-			
+			Node* temp = NULL;
+			Node* ptr = head;
+
+			while (ptr != NULL)
+			{
+				if (ptr -> key == k)
+				{
+					temp = ptr;
+				}
+				ptr = ptr -> next;
+			}
+			return temp;
 		}
 }; 
 
